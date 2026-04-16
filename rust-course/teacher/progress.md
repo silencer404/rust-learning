@@ -2,16 +2,16 @@
 
 ## 当前状态
 
-- 当前阶段：Rust 基础学习 - 复合类型（数组已完成）
-- 下一节（默认）：`rust-course/src/flow-control/statement.md`（流程控制：语句和表达式）
-- 本周目标：完成数组，进入流程控制
+- 当前阶段：Rust 基础学习 - 流程控制（基础已完成）
+- 下一节（默认）：`rust-course/src/basic/match-pattern/all-patterns.md`（模式匹配总览）
+- 本周目标：进入流程控制，并开始模式匹配
 
 ## 下节课开场回忆题（上完课后由老师生成）
 
-- 数组的类型为什么写成 `[T; N]`，其中 `T` 和 `N` 分别表示什么？
-- 为什么 `[i32; 3]` 和 `[i32; 4]` 不是同一种类型？
-- `let a = [3; 5];` 这行代码实际会生成什么数组？
-- 数组和 `Vec<T>` 的本质区别是什么？
+- 为什么说 Rust 里的 `if` 不只是语句，还可以是表达式？
+- `if condition { 5 } else { "six" }` 为什么会报错？
+- `for item in collection`、`for item in &collection`、`for item in &mut collection` 三者在所有权/借用上有什么区别？
+- `break` 和 `continue` 的区别是什么？
 
 ## 课次记录
 
@@ -29,6 +29,7 @@
 - 2026-03-19 | 清清 | `rust-course/src/basic/compound-type/string-slice.md`（后半） | 约45分钟 | 掌握字符串连接 `+` 的所有权语义与 `format!` 对比、字符串转义与原始字符串、`chars()` vs `bytes()`、UTF-8 字符串的安全处理思路，并完成整章收束
 - 2026-03-24 | 清清 | `rust-course/src/basic/compound-type/tuple.md` | 约30分钟 | 掌握元组与数组的核心区别、`.0/.1` 按位置访问、模式解构 `let (x, y, z) = tup`、`_` 忽略位、元组返回多值的常见用途，以及含 `String` 元组在解构/取字段时的 move 语义
 - 2026-03-31 | 清清 | `rust-course/src/basic/compound-type/struct.md` | 约55分钟 | 掌握普通结构体的定义/实例化/字段访问、`mut` 对整体实例的约束、同名字段初始化简写、结构体更新语法 `..old` 的 move/Copy 差异，并能区分普通结构体、元组结构体、单元结构体
+- 2026-04-17 | 清清 | `rust-course/src/basic/flow-control.md` | 约35分钟 | 掌握 `if` 可作为表达式参与赋值、`if/else` 分支返回类型需一致、`else if` 自上而下只命中首个分支、`for`/`while` 基本用法、`for` 中值迭代/借用迭代/可变借用迭代的区别，以及 `break` / `continue` / `_` 的语义
 - 2026-04-16 | 清清 | `rust-course/src/basic/compound-type/array.md` | 约30分钟 | 掌握数组类型写法 `[T; N]`、数组值简写 `[x; n]`、数组元素类型一致且长度固定、长度属于类型的一部分、索引从 0 开始且越界会 panic，并能区分数组与 `Vec<T>` 的使用边界
 - 2026-04-08 | 清清 | `rust-course/src/basic/compound-type/enum.md` | 约35分钟 | 掌握结构体 vs 枚举的建模边界、枚举变体可携带不同形状的数据、变量类型与变体形状的区分，以及 `Option<T>`/`Some`/`None` 的安全含义
 
